@@ -1,0 +1,1664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+
+    <style>
+        .welcome-gallery-div{
+            width: 80%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 4em;
+        }
+
+        .welcome-gallery{
+            width: 45%;
+            height: 2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="https://www.google.com/maps/place/Rosslyn+Riviera+Mall/@-1.2159707,36.7956993,17z/data=!4m10!1m2!2m1!1srosslyn+riviera!3m6!1s0x182f3d5eef234b95:0xac9e573f43fe5923!8m2!3d-1.216572!4d36.7998675!15sCg9yb3NzbHluIHJpdmllcmFaESIPcm9zc2x5biByaXZpZXJhkgEPc2hvcHBpbmdfY2VudGVy4AEA!16s%2Fg%2F11c2l3xmq6?entry=ttu" class="location"><img src="logos/location.png" alt="location" style="height: 1em;"> Roslyn Riviera mall</a>
+        <img src="logos/logo.png" alt="logo" class="nav-logo">
+        <div class="navdropdown-container">
+            <img src="logos/burger-bar.png" alt="burgerbar" class="burgerbar" id="burgerbar" onclick="toggleDropdown()">
+            <div class="navdropdown hidden" id="navdropdown">
+                <a href="/" class="nav-link">HOME</a>
+                <a href="/beverages" class="nav-link">DRINKS</a>
+                <a href="/ourstory" class="nav-link">OUR STORY</a>
+                <a href="/reservations" class="nav-link">RESERVATIONS</a>
+                <a href="/store" class="nav-link">MERCHANDISE</a>
+                <!-- <a href="" class="nav-link">GIFT CARDS</a> -->
+            </div>
+        </div>
+    </div>
+    <h1 style="text-align: center; margin: 1em 0em;">Nairowua Cafe Bar</h1>
+    <div class="carousel slide" id="indexCarousel" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="carousel-image" style="background-image: url('images/index/food1.jpg');"></div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-image" style="background-image: url('images/index/food2.jpg');"></div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-image" style="background-image: url('images/index/food3.jpg');"></div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-image" style="background-image: url('logos/logo.png'); background-size: contain; background-repeat: no-repeat;"></div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-image" style="background-image: url('images/index/food4.png');"></div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-image" style="background-image: url('images/index/food5.jpg');"></div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-image" style="background-image: url('images/index/food6.jpg');"></div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-image" style="background-image: url('logos/logo.png'); background-size: contain; background-repeat: no-repeat;"></div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-image" style="background-image: url('images/index/food7.jpg');"></div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-image" style="background-image: url('images/index/food8.jpg');"></div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-image" style="background-image: url('images/index/food9.jpg');"></div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-image" style="background-image: url('logos/logo.png'); background-size: contain; background-repeat: no-repeat;"></div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-image" style="background-image: url('images/index/food10.jpg');"></div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-image" style="background-image: url('images/index/food11.jpg');"></div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-image" style="background-image: url('images/index/food12.jpg');"></div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-image" style="background-image: url('logos/logo.png'); background-size: contain; background-repeat: no-repeat;"></div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#indexCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#indexCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <h1 style="text-align: center; margin: 1em 0em;" id="drinkoptions">Beverages</h1>
+    <div class="menu-options-div">
+        <a href="#hot" class="menu-options-link">
+            <div class="menu-options" style="background-image: url('images/drinks/coffee.jpg');">
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <p class="menu-options-title">Hot</p>
+                </div>
+            </div>
+        </a>
+        <a href="#cold" class="menu-options-link">
+            <div class="menu-options" style="background-image: url('images/drinks/tea.jpg');">
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <p class="menu-options-title">Cold</p>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="menu-options-div">
+        <a href="#spirits" class="menu-options-link">
+            <div class="menu-options" style="background-image: url('images/drinks/liquor.jpg');">
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <p class="menu-options-title">Spirits</p>
+                </div>
+            </div>
+        </a>
+        <a href="#wines" class="menu-options-link">
+            <div class="menu-options" style="background-image: url('images/drinks/wine.jpg');">
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <p class="menu-options-title">Wines</p>
+                </div>
+            </div>
+        </a>
+        <a href="/" class="menu-options-link">
+            <div class="menu-options" style="background-image: url('images/index/food2.jpg');">
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <p class="menu-options-title">Main Menu</p>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="menu-div">
+        <div class="menu-title" id="hot">
+            <h1>Hot</h1>
+            <a href="#drinkoptions" class="navigate-up">
+                <img src="/logos/up-arrow.png" alt="up arrow" style="height: 2em;">
+            </a>
+        </div>
+        <div style="margin-top: 1em; border: 1px solid white; padding: 0.5em; text-align: center; font-size: 1.2em;">Coffee</div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>Risiretto</p>
+                        <p>Ksh 350/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Coffee</p>
+                        <p>Ksh 250/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Long black single</p>
+                        <p>Ksh 300/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Long black double</p>
+                        <p>Ksh 350/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Macchiato</p>
+                        <p>Ksh 350/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Macchiato long</p>
+                        <p>Ksh 500/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Orange espresso single</p>
+                        <p>Ksh 400/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Orange espresso double</p>
+                        <p>Ksh 500/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Cappuccino single</p>
+                        <p>Ksh 300/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Cappuccino double</p>
+                        <p>Ksh 350/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+            </div>
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>Cafe latte single</p>
+                        <p>Ksh 300/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Cafe latte double</p>
+                        <p>Ksh 350/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Mocha single</p>
+                        <p>Ksh 350/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Mocha double</p>
+                        <p>Ksh 400/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Hot chocolate</p>
+                        <p>Ksh 400/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>French hot chocolate</p>
+                        <p>Ksh 550/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Kiddiccino with extra short</p>
+                        <p>Ksh 200/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p></p>
+                        <p>Ksh /-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 1em; border: 1px solid white; padding: 0.5em; text-align: center; font-size: 1.2em;">Alternative Milk</div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>Soy</p>
+                        <p>Ksh 100/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Almond</p>
+                        <p>Ksh 100/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Oat</p>
+                        <p>Ksh 100/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Lactose free</p>
+                        <p>Ksh 100/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Low fat</p>
+                        <p>Ksh 100/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Goat milk</p>
+                        <p>Ksh 150/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Camel milk</p>
+                        <p>Ksh 150/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 1em; border: 1px solid white; padding: 0.5em; text-align: center; font-size: 1.2em;">Syrups</div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>Vanilla</p>
+                        <p>Ksh 100/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Caramel</p>
+                        <p>Ksh 100/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Hazelnut</p>
+                        <p>Ksh 100/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 1em; border: 1px solid white; padding: 0.5em; text-align: center; font-size: 1.2em;">Tea</div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>Masala tea</p>
+                        <p>Ksh 350/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Kenyan tea</p>
+                        <p>Ksh 350/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Black tea</p>
+                        <p>Ksh 350/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 1em; border: 1px solid white; padding: 0.5em; text-align: center; font-size: 1.2em;">Nairowua Herbal tea</div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>Green tea</p>
+                        <p>Ksh 450/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Camomile</p>
+                        <p>Ksh 450/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Hibiscus</p>
+                        <p>Ksh 450/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Pepper mint</p>
+                        <p>Ksh 450/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Ginger and lemon</p>
+                        <p>Ksh 450/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-title" id="cold">
+            <h1>Cold</h1>
+            <a href="#drinkoptions" class="navigate-up">
+                <img src="/logos/up-arrow.png" alt="up arrow" style="height: 2em;">
+            </a>
+        </div>
+        <div style="margin-top: 1em; border: 1px solid white; padding: 0.5em; text-align: center; font-size: 1.2em;">Iced beverages</div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>Iced freddo espresso</p>
+                        <p>Ksh 500/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Iced freddo Cappuccino</p>
+                        <p>Ksh 550/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Iced freddo latte</p>
+                        <p>Ksh 550/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Iced freddo</p>
+                        <p>Ksh 550/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Iced freddo chocolate</p>
+                        <p>Ksh 550/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Iced tea</p>
+                        <p>Ksh 500/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Iced mocha</p>
+                        <p>Ksh 600/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Extra short</p>
+                        <p>Ksh 100/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 1em; border: 1px solid white; padding: 0.5em; text-align: center; font-size: 1.2em;">Sodas</div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>Coke</p>
+                        <p>Ksh 300/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Coke zero</p>
+                        <p>Ksh 300/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Sprite</p>
+                        <p>Ksh 300/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Fanta orange</p>
+                        <p>Ksh 300/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Tonic water</p>
+                        <p>Ksh 300/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Soda water</p>
+                        <p>Ksh 300/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Ginger ale</p>
+                        <p>Ksh 300/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Stoney tangawizi</p>
+                        <p>Ksh 300/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 1em; border: 1px solid white; padding: 0.5em; text-align: center; font-size: 1.2em;">Water</div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>Sparkling 750ml</p>
+                        <p>Ksh 400/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Still 750ml</p>
+                        <p>Ksh 350/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 1em; border: 1px solid white; padding: 0.5em; text-align: center; font-size: 1.2em;">Fresh Juice</div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>Passion</p>
+                        <p>Ksh 450/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Orange</p>
+                        <p>Ksh 450/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Tropical</p>
+                        <p>Ksh 450/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Detox juice</p>
+                        <p>Ksh 800/-</p>
+                    </div>
+                    <p class="menu-item-desc">Immune booster carrot,Orange and ginger juice Green juice spinach,kale parsley and apple Roots beetroot,carrot apple,lime and ginger </p>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 1em; border: 1px solid white; padding: 0.5em; text-align: center; font-size: 1.2em;">Tropical Juice</div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>Mango and passion</p>
+                        <p>Ksh 600/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Mango and orange</p>
+                        <p>Ksh 600/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Orange and passion</p>
+                        <p>Ksh 600/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 1em; border: 1px solid white; padding: 0.5em; text-align: center; font-size: 1.2em;">Milkshakes and smoothies</div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>Milkshakes</p>
+                        <p>Ksh 600/-</p>
+                    </div>
+                    <p class="menu-item-desc">Vanilla,chocolate,coffee,banana,oreos and strawberry</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Smoothies</p>
+                        <p>Ksh 650/-</p>
+                    </div>
+                    <p class="menu-item-desc">fruit blebded whith vanilla yoghurt or plain yoghurt</p>
+                    <p class="menu-item-desc">With extra  of Greek yoghurt - 100/-</p>
+                    <p class="menu-item-desc">Baobab powder or moringa powder - 100/-</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-title" id="wines">
+            <h1>Wines</h1>
+            <a href="#drinkoptions" class="navigate-up">
+                <img src="/logos/up-arrow.png" alt="up arrow" style="height: 2em;">
+            </a>
+        </div>
+        <div style="margin-top: 1em; border: 1px solid white; padding: 0.5em; text-align: center; font-size: 1.2em;">White</div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>Mud house sauvignon blanc single vineyard</p>
+                        <p>Ksh 11,620/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Ventitere pinot grigio</p>
+                        <p>Ksh 5,725/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>B and G chablis</p>
+                        <p>Ksh 16,100/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Dragons back mountain natural sweet white</p>
+                        <p>Ksh 11,650/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Bodega Navarro correas reserva seleccion chardonnay</p>
+                        <p>Ksh 7,650/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Penfolds BIN 311 orange chardonnay</p>
+                        <p>Ksh 21,000/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Dragons back mountain natural sweet rose</p>
+                        <p>Ksh 3,700/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>B and G cotes de provence rose</p>
+                        <p>Ksh 8,650/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 1em; border: 1px solid white; padding: 0.5em; text-align: center; font-size: 1.2em;">Red</div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>Dragons back mountain smooth red sweet</p>
+                        <p>Ksh 3,700/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Perderg  cellar pinotage</p>
+                        <p>Ksh 4,200/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Hill and date cabernet sauvignon shiraz</p>
+                        <p>Ksh 5,500/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Hardy's brave new word shiraz black</p>
+                        <p>Ksh 7,200/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Castillo De aresan cabernet sauvignon boubon</p>
+                        <p>Ksh 8,650/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 1em; border: 1px solid white; padding: 0.5em; text-align: center; font-size: 1.2em;">Penfolds</div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>Penfolds bin 128 shiraz</p>
+                        <p>Ksh 26,964/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Penfolds bin 389 cabernet sauvignon</p>
+                        <p>Ksh 46,763/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Penfolds bin 407 cabernet sauvigon</p>
+                        <p>Ksh 51,713/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Penfolds ST Henri shiraz</p>
+                        <p>Ksh 55,673/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-title" id="spirits">
+            <h1>Spirits</h1>
+            <a href="#drinkoptions" class="navigate-up">
+                <img src="/logos/up-arrow.png" alt="up arrow" style="height: 2em;">
+            </a>
+        </div>
+        <div style="margin-top: 1em; border: 1px solid white; padding: 0.5em; text-align: center; font-size: 1.2em;">Vodka</div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>ABSOLUTE VODKA 750ML</p>
+                        <p>Ksh 300/7,500/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>GREY GOOSE 1L</p>
+                        <p>Ksh 450/14,500/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>BELVEDERE 750ML</p>
+                        <p>Ksh 600/14,500/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>CIROC BLUE 750ML</p>
+                        <p>Ksh 650/16,000/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 1em; border: 1px solid white; padding: 0.5em; text-align: center; font-size: 1.2em;">Gin</div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>TANQUERAY LONDN DRY 750ML</p>
+                        <p>Ksh 350/8,500/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>BOTANIST 700ML</p>
+                        <p>Ksh 500/11,000/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>CLEMEN GOLD  500ML</p>
+                        <p>Ksh 900/14,000/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>PROCERA BLUE DOT 700ML</p>
+                        <p>Ksh 1,000/22,000/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>PROCERA RED DOT 700ML</p>
+                        <p>Ksh 1,500/27,500/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>PROCERA GREEN DOT 700ML</p>
+                        <p>Ksh 1,600/35,000/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 1em; border: 1px solid white; padding: 0.5em; text-align: center; font-size: 1.2em;">Rum</div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>MALIBU 750ML</p>
+                        <p>Ksh 200/5,000/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>HAVANA ESPECIAL ANEJO 750ML</p>
+                        <p>Ksh 300/6,600/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>CAPTAIN MORGAN SPICED 750ML</p>
+                        <p>Ksh 400/7,500/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>HAVANA 7 YEARS 750ML</p>
+                        <p>Ksh 600/14,000/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>RON ZACAPA 1L</p>
+                        <p>Ksh 1,500/47,000/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 1em; border: 1px solid white; padding: 0.5em; text-align: center; font-size: 1.2em;">Blended Scotch whiskey</div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>BALLANTINES 750ML</p>
+                        <p>Ksh 250/6500/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>CHIVAS REGAL 12YEARS 750ML</p>
+                        <p>Ksh 500/12,000/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>NAKED GROUSE 750ML</p>
+                        <p>Ksh 600/14,500/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>JOHNNIE WALKER BLUE 750ML</p>
+                        <p>Ksh 2,800/69,000/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>CHIVAS REGAL 25YEARS 700ML</p>
+                        <p>Ksh 4,500/97,000/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 1em; border: 1px solid white; padding: 0.5em; text-align: center; font-size: 1.2em;">Single malt scotch whiskey</div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>GLEN FIDDICH 12YEARS 750ML</p>
+                        <p>Ksh 850/21,000/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>SINGLETON 18 YEARS 700ML</p>
+                        <p>Ksh 1,300/28,000/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>GLENMORAGE SIGNET 700ML</p>
+                        <p>Ksh 4,500/103,500/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>MACALLAN 18 YEARS DOUBLE CASK 700ML</p>
+                        <p>Ksh 6,500/150,000/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 1em; border: 1px solid white; padding: 0.5em; text-align: center; font-size: 1.2em;">Single malt pitted whiskey</div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>TALISKER STORM 10YRS 750ML</p>
+                        <p>Ksh 900/22,000/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>LAGAVULIN 16YRS MALT 750ML</p>
+                        <p>Ksh 1,500/37,000/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 1em; border: 1px solid white; padding: 0.5em; text-align: center; font-size: 1.2em;">Irish Whiskey</div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>JAMESON 750ML</p>
+                        <p>Ksh 300/7,500/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 1em; border: 1px solid white; padding: 0.5em; text-align: center; font-size: 1.2em;">Bourbon/American Whiskey</div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>JIM BEAM 750ML</p>
+                        <p>Ksh 350/8,000/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>JACK DANIELS OLD NO. 7 700ML</p>
+                        <p>Ksh 500/11,000/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>MARKERS MARK 750ML</p>
+                        <p>Ksh 550/13,000/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>BULLEIT 700ML</p>
+                        <p>Ksh 650/14,500/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 1em; border: 1px solid white; padding: 0.5em; text-align: center; font-size: 1.2em;">Canadian club whiskey</div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>CANADIAN CLUB 750ML</p>
+                        <p>Ksh 300/6,900/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>CROWN ROYAL 1L</p>
+                        <p>Ksh 400/12,000/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 1em; border: 1px solid white; padding: 0.5em; text-align: center; font-size: 1.2em;">Tequilla</div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>JOSE CUERVO SILVER 750ML</p>
+                        <p>Ksh 400/9,000/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>JOSE CUERVO GOLD 750ML</p>
+                        <p>Ksh 400/9,000/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>PATRON XO CAFÉ 750ML</p>
+                        <p>Ksh 800/19,000/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>PATRON SILVER 750ML</p>
+                        <p>Ksh 850/21,000/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>DON JULIO ANEJO 750ML</p>
+                        <p>Ksh 1,100/27,000/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 1em; border: 1px solid white; padding: 0.5em; text-align: center; font-size: 1.2em;">Cream</div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>AMARULA 750ML</p>
+                        <p>Ksh 300/7,000/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>BAILEYS 750ML</p>
+                        <p>Ksh 350/8,500/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 1em; border: 1px solid white; padding: 0.5em; text-align: center; font-size: 1.2em;">Herb Flavoured</div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>DISARONO AMARETTO 750ML</p>
+                        <p>Ksh 300/7,000/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>JAGER MEISTER 700ML</p>
+                        <p>Ksh 400/9,000/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>GALLIANO 700ML</p>
+                        <p>Ksh 600/13,000/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 1em; border: 1px solid white; padding: 0.5em; text-align: center; font-size: 1.2em;">Coffee liqueur</div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>KHALUA 750ML</p>
+                        <p>Ksh 350/8,000/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>TIA MARIA 700ML</p>
+                        <p>Ksh 450/9,500/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 1em; border: 1px solid white; padding: 0.5em; text-align: center; font-size: 1.2em;">Orange Liqueur</div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>BUTTLERS TRIPLE SEC 750ML</p>
+                        <p>Ksh 300/6,500/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>COINTREAU 750ML</p>
+                        <p>Ksh 450/10,000/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 1em; border: 1px solid white; padding: 0.5em; text-align: center; font-size: 1.2em;">Apparatifs</div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>PERNOD 750ML</p>
+                        <p>Ksh 300/6,000/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>RICARD 750ML</p>
+                        <p>Ksh 350/7,000/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>CAMPARI 750ML</p>
+                        <p>Ksh 350/8,000/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>FERNET BRANCA 750ML</p>
+                        <p>Ksh 450/10,500/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>MARTIN ROSSO 750ML</p>
+                        <p>Ksh 250/6,000/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>MARTINI BIANCO 750ML</p>
+                        <p>Ksh 250/6,000/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>MARTINI EXTRA DRY 750ML</p>
+                        <p>Ksh 250/6,000/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 1em; border: 1px solid white; padding: 0.5em; text-align: center; font-size: 1.2em;">Brandy</div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>VICEROY 750ML</p>
+                        <p>Ksh 200/5,000/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>KWV 10YEARS 750ML</p>
+                        <p>Ksh 450/10,500/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>METAXA 5 STAR 1L</p>
+                        <p>Ksh 400/13,000/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 1em; border: 1px solid white; padding: 0.5em; text-align: center; font-size: 1.2em;">Gognac</div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>HENESSY VS 700ML</p>
+                        <p>Ksh 700/16,000/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>MARTELL VSOP 700ML</p>
+                        <p>Ksh 1,100/23,500/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>HENESSY VSOP 700ML</p>
+                        <p>Ksh 1,200/27,000/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>REMY MARTINS XO 700ML</p>
+                        <p>Ksh 3,500/76,000/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 1em; border: 1px solid white; padding: 0.5em; text-align: center; font-size: 1.2em;">Classic Cocktails</div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>Mojito</p>
+                        <p>Ksh 1000/-</p>
+                    </div>
+                    <p class="menu-item-desc">White rum , mint, soda water</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Martini dry</p>
+                        <p>Ksh 1000/-</p>
+                    </div>
+                    <p class="menu-item-desc">Gin, dry vermouth</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Whiskey Sour</p>
+                        <p>Ksh 1000/-</p>
+                    </div>
+                    <p class="menu-item-desc">Whiskey, egg white, angostura bitters</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Bloody Mary</p>
+                        <p>Ksh 1000/-</p>
+                    </div>
+                    <p class="menu-item-desc">Vodka, Worcestershire sauce, tabasco, tomato juice, blackpepper</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Basil smash</p>
+                        <p>Ksh 1000/-</p>
+                    </div>
+                    <p class="menu-item-desc">Gin, basil20</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Mint julep</p>
+                        <p>Ksh 1000/-</p>
+                    </div>
+                    <p class="menu-item-desc">Whiskey, mint, sugar</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Gimlet</p>
+                        <p>Ksh 1000/-</p>
+                    </div>
+                    <p class="menu-item-desc">Gin, lime</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Caipirinha</p>
+                        <p>Ksh 1000/-</p>
+                    </div>
+                    <p class="menu-item-desc">White rum, sugar</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Hot toddy</p>
+                        <p>Ksh 1000/-</p>
+                    </div>
+                    <p class="menu-item-desc">Brandy, honey, ginger</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Moscow Mule</p>
+                        <p>Ksh 1000/-</p>
+                    </div>
+                    <p class="menu-item-desc">Vodka, ginger beer</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Amaretto Sour</p>
+                        <p>Ksh 1100/-</p>
+                    </div>
+                    <p class="menu-item-desc">Amaretto, egg white</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Sidecar</p>
+                        <p>Ksh 1100/-</p>
+                    </div>
+                    <p class="menu-item-desc">Whiskey, cointreau</p>
+                </div>
+            </div>
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>Margarita</p>
+                        <p>Ksh 1100/-</p>
+                    </div>
+                    <p class="menu-item-desc">Tequila, Cointreau</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>New york sour</p>
+                        <p>Ksh 1100/-</p>
+                    </div>
+                    <p class="menu-item-desc">Whiskey, red wine, egg white</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Godfather</p>
+                        <p>Ksh 1200/-</p>
+                    </div>
+                    <p class="menu-item-desc">Whiskey, amaretto</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Old Fashioned</p>
+                        <p>Ksh 1200/-</p>
+                    </div>
+                    <p class="menu-item-desc">Whiskey, angostura bitters, brown sugar</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Negroni</p>
+                        <p>Ksh 1200/-</p>
+                    </div>
+                    <p class="menu-item-desc">Gin, sweet vermouth, Campari</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Irish Coffee</p>
+                        <p>Ksh 1200/-</p>
+                    </div>
+                    <p class="menu-item-desc">Whiskey, coffee, cream</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Cosmopolitan</p>
+                        <p>Ksh 1200/-</p>
+                    </div>
+                    <p class="menu-item-desc">Vodka, cointreau, cranberry</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Daiquiri</p>
+                        <p>Ksh 1200/-</p>
+                    </div>
+                    <p class="menu-item-desc">White rum, strawberry, sugar</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Pina Colada</p>
+                        <p>Ksh 1200/-</p>
+                    </div>
+                    <p class="menu-item-desc">White rum, coconut cream, pineapple juice</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Mudslide</p>
+                        <p>Ksh 1200/-</p>
+                    </div>
+                    <p class="menu-item-desc">Vodka, coffee liqueur, baileys</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Boulverdier</p>
+                        <p>Ksh 1350/-</p>
+                    </div>
+                    <p class="menu-item-desc">Whiskey, campari, sweet vermouth</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Long Island Iced Tea</p>
+                        <p>Ksh 1600/-</p>
+                    </div>
+                    <p class="menu-item-desc">Vodka, gin, tequila, white rum, cointreau</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Pisco sour (classic, strawberry, passion)</p>
+                        <p>Ksh 1600/-</p>
+                    </div>
+                    <p class="menu-item-desc">Pisco, egg white</p>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 1em; border: 1px solid white; padding: 0.5em; text-align: center; font-size: 1.2em;">Speed rail alcohol</div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>Vodka - Smirnoff</p>
+                        <p></p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Gin- Gordon's</p>
+                        <p></p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Tequila- jose cuervo</p>
+                        <p></p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Rum- Bacardi</p>
+                        <p></p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Whiskey- bulleit bourbon</p>
+                        <p></p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Liqueur- cointreau/ triple sec</p>
+                        <p></p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Brandy - viceroy</p>
+                        <p></p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+            </div>
+        </div>
+        <div class="menu-title" id="beers">
+            <h1>Beers</h1>
+            <a href="#drinkoptions" class="navigate-up">
+                <img src="/logos/up-arrow.png" alt="up arrow" style="height: 2em;">
+            </a>
+        </div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>TUSKER LAGER</p>
+                        <p>Ksh 500/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>TUSKER LITE</p>
+                        <p>Ksh 550/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>WHITECAP LAGER</p>
+                        <p>Ksh 550/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>SAVANNAH</p>
+                        <p>Ksh 600/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 1em; border: 1px solid white; padding: 0.5em; text-align: center; font-size: 1.2em;">Kraft beers</div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>BILA SHAKA</p>
+                        <p>Ksh 450/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>CAPITAN</p>
+                        <p>Ksh 450/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>JUA KALI</p>
+                        <p>Ksh 450/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>CHEZ GUERRILLA</p>
+                        <p>Ksh 450/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 1em; border: 1px solid white; padding: 0.5em; text-align: center; font-size: 1.2em;">Imported beers</div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>HEINEKEN</p>
+                        <p>Ksh 550/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>CORONA</p>
+                        <p>Ksh 600/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>GUINESS</p>
+                        <p>Ksh 550/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        navdropdown = document.getElementById("navdropdown")
+
+        function toggleDropdown() {
+            navdropdown.classList.toggle("hidden")
+        }
+
+        function menuDropdown(id) {
+            dropdown = document.getElementById(id)
+            dropdown.classList.toggle("hidden")
+        }
+    </script>
+</body>
+</html>

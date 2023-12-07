@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+
+    <style>
+        .welcome-gallery-div{
+            width: 80%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 4em;
+        }
+
+        .welcome-gallery{
+            width: 45%;
+            height: 2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="https://www.google.com/maps/place/Rosslyn+Riviera+Mall/@-1.2159707,36.7956993,17z/data=!4m10!1m2!2m1!1srosslyn+riviera!3m6!1s0x182f3d5eef234b95:0xac9e573f43fe5923!8m2!3d-1.216572!4d36.7998675!15sCg9yb3NzbHluIHJpdmllcmFaESIPcm9zc2x5biByaXZpZXJhkgEPc2hvcHBpbmdfY2VudGVy4AEA!16s%2Fg%2F11c2l3xmq6?entry=ttu" class="location"><img src="logos/location.png" alt="location" style="height: 1em;"> Roslyn Riviera mall</a>
+        <img src="logos/logo.png" alt="logo" class="nav-logo">
+        <div class="navdropdown-container">
+            <img src="logos/burger-bar.png" alt="burgerbar" class="burgerbar" id="burgerbar" onclick="toggleDropdown()">
+            <div class="navdropdown hidden" id="navdropdown">
+                <a href="/" class="nav-link">HOME</a>
+                <a href="/beverages" class="nav-link">DRINKS</a>
+                <a href="/ourstory" class="nav-link">OUR STORY</a>
+                <a href="/reservations" class="nav-link">RESERVATIONS</a>
+                <a href="/store" class="nav-link">MERCHANDISE</a>
+                <!-- <a href="" class="nav-link">GIFT CARDS</a> -->
+            </div>
+        </div>
+    </div>
+    <h1 style="text-align: center; margin: 1em 0em;">Nairowua Cafe Bar</h1>
+    <div class="carousel slide" id="indexCarousel" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="carousel-image" style="background-image: url('images/index/food1.jpg');"></div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-image" style="background-image: url('images/index/food2.jpg');"></div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-image" style="background-image: url('images/index/food3.jpg');"></div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-image" style="background-image: url('logos/logo.png'); background-size: contain; background-repeat: no-repeat;"></div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-image" style="background-image: url('images/index/food4.png');"></div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-image" style="background-image: url('images/index/food5.jpg');"></div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-image" style="background-image: url('images/index/food6.jpg');"></div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-image" style="background-image: url('logos/logo.png'); background-size: contain; background-repeat: no-repeat;"></div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-image" style="background-image: url('images/index/food7.jpg');"></div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-image" style="background-image: url('images/index/food8.jpg');"></div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-image" style="background-image: url('images/index/food9.jpg');"></div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-image" style="background-image: url('logos/logo.png'); background-size: contain; background-repeat: no-repeat;"></div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-image" style="background-image: url('images/index/food10.jpg');"></div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-image" style="background-image: url('images/index/food11.jpg');"></div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-image" style="background-image: url('images/index/food12.jpg');"></div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-image" style="background-image: url('logos/logo.png'); background-size: contain; background-repeat: no-repeat;"></div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#indexCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#indexCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <h1 style="text-align: center; margin: 1em 0em;" id="foodoptions">OUR MENU</h1>
+    <div class="menu-options-div">
+        <a href="#breakfastsection" class="menu-options-link">
+            <div class="menu-options" style="background-image: url('./images/index/food10.jpg');">
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <p class="menu-options-title">BREAKFAST</p>
+                </div>
+            </div>
+        </a>
+        <a href="#mainchicken" class="menu-options-link">
+            <div class="menu-options" style="background-image: url('./images/index/food12.jpg');">
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <p class="menu-options-title">MAIN-CHICKEN</p>
+                </div>
+            </div>
+        </a>
+        <a href="#mainbeef" class="menu-options-link">
+            <div class="menu-options" style="background-image: url('images/index/steak.jpg');">
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <p class="menu-options-title">MAIN-BEEF</p>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="menu-options-div">
+        <a href="#mainseafood" class="menu-options-link">
+            <div class="menu-options" style="background-image: url('images/index/seafood.jpg');">
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <p class="menu-options-title">MAIN-SEAFOOD</p>
+                </div>
+            </div>
+        </a>
+        <a href="#mainveg" class="menu-options-link">
+            <div class="menu-options" style="background-image: url('images/index/veg.jpg');">
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <p class="menu-options-title">MAIN-VEG</p>
+                </div>
+            </div>
+        </a>
+        <a href="#salads" class="menu-options-link">
+            <div class="menu-options" style="background-image: url('images/index/salad.jpg');">
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <p class="menu-options-title">Salads</p>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="menu-options-div">
+        <a href="#burgers" class="menu-options-link">
+            <div class="menu-options" style="background-image: url('images/index/burger.jpg');">
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <p class="menu-options-title">Burgers</p>
+                </div>
+            </div>
+        </a>
+        <a href="#tapas" class="menu-options-link">
+            <div class="menu-options" style="background-image: url('images/index/tapas.jpg');">
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <p class="menu-options-title">Tapas</p>
+                </div>
+            </div>
+        </a>
+        <a href="#nairowuagourmet" class="menu-options-link">
+            <div class="menu-options" style="background-image: url('images/index/gourmet.jpg');">
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <p class="menu-options-title">Nairowua Gourmet</p>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="menu-options-div">
+        <a href="#dessert" class="menu-options-link">
+            <div class="menu-options" style="background-image: url('./images/index/food5.jpg');">
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <p class="menu-options-title">Deserts</p>
+                </div>
+            </div>
+        </a>
+        <a href="#kids" class="menu-options-link">
+            <div class="menu-options" style="background-image: url('images/index/kids.jpg');">
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <p class="menu-options-title">Kids</p>
+                </div>
+            </div>
+        </a>
+        <a href="#sushi" class="menu-options-link">
+            <div class="menu-options" style="background-image: url('images/index/sushi.jpg');">
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <p class="menu-options-title">Sushi</p>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="menu-options-div">
+        <a href="/beverages" class="menu-options-link">
+            <div class="menu-options" style="background-image: url('images/index/drink.jpg');">
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <p class="menu-options-title">BEVERAGES</p>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="menu-div">
+        <div class="menu-title" id="breakfastsection">
+            <h1>BREAKFAST</h1>
+            <a href="#foodoptions" class="navigate-up">
+                <img src="/logos/up-arrow.png" alt="up arrow" style="height: 2em;">
+            </a>
+        </div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>Bakers Basket</p>
+                        <p>Ksh 800/-</p>
+                    </div>
+                    <p class="menu-item-desc">A selection of 3 breads accompanied with butter, jam and honey served with tea coffee or juice</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Nairowua Full on Breakfast</p>
+                        <p>Ksh 1199/-</p>
+                    </div>
+                    <p class="menu-item-desc">Two eggs of your choice, sausages, bacon, sauteed mushrooms, baked beans, grilled tomatoes and bread serverd with coffee or orange juice</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Truffle Scrambled Eggs</p>
+                        <p>Ksh 1000/-</p>
+                    </div>
+                    <p class="menu-item-desc">Creamy scrambled eggs infused with truffle oil served with toasted brioche and a side of smoked salmon</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Chef Clinton's special granola bowl</p>
+                        <p>Ksh 1050/-</p>
+                    </div>
+                    <p class="menu-item-desc">Homemade granola serverd with yogurt, honey and tropical fruits</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Mama Alexandra's Greek Shakshuka</p>
+                        <p>Ksh 1099/-</p>
+                    </div>
+                    <p class="menu-item-desc">Three eggs of your choice in a rich tomato and bell pepper sauce olives, served with feta cheese and arugula leaves with a side of crispy garlic bread</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Mexican Breakfast Tacos</p>
+                        <p>Ksh 1100/-</p>
+                    </div>
+                    <p class="menu-item-desc">Soft flour tortillas, filled with creamy scrambled eggs, salsa, red cabbage and sour cream crispy bacon and guacamole</p>
+                </div>
+            </div>
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>Lobster Benedict</p>
+                        <p>Ksh 1199/-</p>
+                    </div>
+                    <p class="menu-item-desc">Poached lobster on an toasted english muffin topped with poached eggs and hollandaise sauce served with a side of arugula and cherry tomato salad</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Issac's sweet delight</p>
+                        <p>Ksh 850/-</p>
+                    </div>
+                    <p class="menu-item-desc">Mouthwatering waffles and pancakes served with honey, maple syrup and mango compote</p>
+                </div>
+                <h2 style="margin-bottom: 2em;">Nairowua's delectable omelettes</h2>
+                <div>
+                    <div class="menu-item-head2">
+                        <p>Plain</p>
+                        <p>Ksh 1000/-</p>
+                    </div>
+                    <p class="menu-item-desc2">Plain eggs</p>
+                </div>
+                <div>
+                    <div class="menu-item-head2">
+                        <p>Spanish</p>
+                        <p>Ksh 1100/-</p>
+                    </div>
+                    <p class="menu-item-desc2">A European specialty three eggs, onions, peppers and tomatoes</p>
+                </div>
+                <div>
+                    <div class="menu-item-head2">
+                        <p>Papa spiros</p>
+                        <p>Ksh 1100/-</p>
+                    </div>
+                    <p class="menu-item-desc">Feta and spinach served with patas, bravas and bacon</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Lebanese Breakfast</p>
+                        <p>Ksh 1800/-</p>
+                    </div>
+                    <p class="menu-item-desc">Humus, olives, full madamas, boiled eggs, homemade pita bread served with a side salad</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Breakfast Sushi roll</p>
+                        <p>Ksh 1800/-</p>
+                    </div>
+                    <p class="menu-item-desc">Nori sheet rolled with scrambled eggs, avocado, cucumber and smoked salmon served with wasabi, pickled ginger and soy sauce</p>
+                </div>
+            </div>
+        </div>
+        <div class="menu-title" id="mainchicken">
+            <h1>Main - Chicken</h1>
+            <a href="#foodoptions" class="navigate-up">
+                <img src="/logos/up-arrow.png" alt="up arrow" style="height: 2em;">
+            </a>
+        </div>
+        <p style="margin-top: 1em; font-family: Resamitz;">Main courses served with a choice of Irio (Kikuyu mash) or coconut rice and Ngwaci (sweet potatoes)</p>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>Classic french chicken vol-au-vent</p>
+                        <p>Ksh 1900/-</p>
+                    </div>
+                    <p class="menu-item-desc">Shredded braised chicken in white wine with mushrooms and meatballs served on puff pastry</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Garlic herbed spring chicken</p>
+                        <p>Ksh 2100/-</p>
+                    </div>
+                    <p class="menu-item-desc">A whole chicken oven baked served with chicken jus</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Thai chicken curry</p>
+                        <p>Ksh 2000/-</p>
+                    </div>
+                    <p class="menu-item-desc">With coconut cream sauce served with chapati and jasmine rice</p>
+                </div>
+            </div>
+        </div>
+        <div class="menu-title" id="mainbeef">
+            <h1>Main - Beef</h1>
+            <a href="#foodoptions" class="navigate-up">
+                <img src="/logos/up-arrow.png" alt="up arrow" style="height: 2em;">
+            </a>
+        </div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>T-bone steak</p>
+                        <p>Ksh 2100/-</p>
+                    </div>
+                    <p class="menu-item-desc">600g T-bone steak grilled to your preference served with vegetables, garlic baby potatoes and mushroom sauce</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Vampire steak</p>
+                        <p>Ksh 2100/-</p>
+                    </div>
+                    <p class="menu-item-desc">350g aged sirloin steak grilled to your preference with garlic herb sauteed onions and mushrooms with pepper sauce</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>1kg aged tomahawk</p>
+                        <p>Ksh 6000/-</p>
+                    </div>
+                    <p class="menu-item-desc">Grilled to your preference served with roasted root vegetables and a herb butter sauce</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Grilled lamb chops</p>
+                        <p>Ksh 2100/-</p>
+                    </div>
+                    <p class="menu-item-desc">Served with grilled asparagus and creamed spinach with a mint sauce</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Sheila's grilled pork chops</p>
+                        <p>Ksh 2100/-</p>
+                    </div>
+                    <p class="menu-item-desc">Served with honey glazed carrots and a Moroccan couscous with an apple sauce</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Mixed Grilled platter</p>
+                        <p>Ksh 6000/-</p>
+                    </div>
+                    <p class="menu-item-desc">Beef fillet, chicken skewers, pork chops, lamb chops and bratwurst sausage served with parmesan chips and kachumbari and a sauce of your choice</p>
+                </div>
+            </div>
+        </div>
+        <div class="menu-title" id="mainseafood">
+            <h1>Main - Seafood</h1>
+            <a href="#foodoptions" class="navigate-up">
+                <img src="/logos/up-arrow.png" alt="up arrow" style="height: 2em;">
+            </a>
+        </div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>Mango snapper</p>
+                        <p>Ksh 2100/-</p>
+                    </div>
+                    <p class="menu-item-desc">Pan fried red snapper served with a tropical mango salsa and Asian stir fried vegetables</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Aussie fish and chips</p>
+                        <p>Ksh 2100/-</p>
+                    </div>
+                    <p class="menu-item-desc">Fish cooked in a beer batter served with garlic chips, coleslaw and tartar sauce</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Grilled salmon</p>
+                        <p>Ksh 3000/-</p>
+                    </div>
+                    <p class="menu-item-desc">Served with lemon butter sauce, avocado and mango salsa</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Lobster risotto</p>
+                        <p>Ksh 2500/-</p>
+                    </div>
+                    <p class="menu-item-desc">Served with a creamy arborio rice and zucchini</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Thai prawn curry</p>
+                        <p>Ksh 2000/-</p>
+                    </div>
+                    <p class="menu-item-desc">Served with coconut cream sauce, chapati and jasmine rice</p>
+                </div>
+            </div>
+        </div>
+        <div class="menu-title" id="mainveg">
+            <h1>Main - Veg</h1>
+            <a href="#foodoptions" class="navigate-up">
+                <img src="/logos/up-arrow.png" alt="up arrow" style="height: 2em;">
+            </a>
+        </div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>Sweet chilli tofu</p>
+                        <p>Ksh 1500/-</p>
+                    </div>
+                    <p class="menu-item-desc">sauteed tofu with sweet chilli sauce, mushroom, eggplant and vegetables served with coconut rice</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>The lebanese platter</p>
+                        <p>Ksh 1550/-</p>
+                    </div>
+                    <p class="menu-item-desc">Humus, falafel, bread, mozzarella, grilled haloumi, grapes, pomegranate seeds, fried vegetables, cherry tomatoes, mixed pickles, tzatziki cucumber salad, tahini sauce and crispy pita bread</p>
+                </div>
+            </div>
+        </div>
+        <div class="menu-title" id="pasta">
+            <h1>Pasta homemade</h1>
+            <a href="#foodoptions" class="navigate-up">
+                <img src="/logos/up-arrow.png" alt="up arrow" style="height: 2em;">
+            </a>
+        </div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>Gnocchi</p>
+                        <p>Ksh 1800/-</p>
+                    </div>
+                    <p class="menu-item-desc">Served with a creamy gorgonzola sauce with garlic bread</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Prawns aglio olio</p>
+                        <p>Ksh 1800/-</p>
+                    </div>
+                    <p class="menu-item-desc">Spiced prawns with garlic, olive oil and chilli served with herb bread</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Sebi's ravioli</p>
+                        <p>Ksh 1800/-</p>
+                    </div>
+                    <p class="menu-item-desc">Stuffed ravioli with spinach and ricotta in a Napolitano and basil sauce</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Nairowua's classic Bolognese</p>
+                        <p>Ksh 1600/-</p>
+                    </div>
+                    <p class="menu-item-desc">A classic Italian dish combining the rich flavours of a hearty meat sauce with perfectly cooked pasta</p>
+                </div>
+            </div>
+        </div>
+        <div class="menu-title" id="salads">
+            <h1>Salads</h1>
+            <a href="#foodoptions" class="navigate-up">
+                <img src="/logos/up-arrow.png" alt="up arrow" style="height: 2em;">
+            </a>
+        </div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>Thai buddha bowl</p>
+                        <p>Ksh 1500/-</p>
+                    </div>
+                    <p class="menu-item-desc">Peanut chicken kale, spring onion, carrot, red cabbage, quinoa, red radish sprouts, roasted nuts, red bell peppers served with balsamic vinaigrette</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Smoked snapper poke bowl</p>
+                        <p>Ksh 1800/-</p>
+                    </div>
+                    <p class="menu-item-desc">Sushi rice, avocado, pickled cabbage, mango, cucumber, edamame, shredded carrots, pickled onions, red radish prouts served with sesame soy ginger</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Campania caprese salad</p>
+                        <p>Ksh 1200/-</p>
+                    </div>
+                    <p class="menu-item-desc">Fresh mozzarella, ripe tomatoes, basil leaves drizzled with balsamic glaze and olive oil</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Strawberry and spinach salad</p>
+                        <p>Ksh 1200/-</p>
+                    </div>
+                    <p class="menu-item-desc">Baby spinach, fresh strawberries, sliced almonds, crumbled goat cheese and balsamic vinaigrette</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Yum-nau-thai beef salad</p>
+                        <p>Ksh 1500/-</p>
+                    </div>
+                    <p class="menu-item-desc">Sliced grilled steak cooked to your preference, mixed greens, shredded carrots, red bell peppers, fresh mint, cilantro and a tangy thai dressing</p>
+                </div>
+            </div>
+        </div>
+        <div class="menu-title" id="burgers">
+            <h1>Burgers</h1>
+            <a href="#foodoptions" class="navigate-up">
+                <img src="/logos/up-arrow.png" alt="up arrow" style="height: 2em;">
+            </a>
+        </div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>Aussie big burger</p>
+                        <p>Ksh 1300/-</p>
+                    </div>
+                    <p class="menu-item-desc">Two juicy beef pattys, lettuce, cheese, egg, beetroot and special sauce</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Riviera smokey chicken burger</p>
+                        <p>Ksh 1300/-</p>
+                    </div>
+                    <p class="menu-item-desc">Crunchy tasty smoked chicken with avocado, palmarised onions and a red mayonnaise slay</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>BLT Dwayne's way</p>
+                        <p>Ksh 1300/-</p>
+                    </div>
+                    <p class="menu-item-desc">Bacon, lettuce, tomato, avocado with piri piri mayo</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Rosslyn's Tuna sandwich</p>
+                        <p>Ksh 1150/-</p>
+                    </div>
+                    <p class="menu-item-desc">Avocado, rocket, onions, celery and raddish with a tangy seafood sauce</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Ultimate cuban sandwich</p>
+                        <p>Ksh 1450/-</p>
+                    </div>
+                    <p class="menu-item-desc">Marinated roast pork layered with chorizo, prosciutto, cheese and pickles with your choice of sauce</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Nairowua's Mexican Tacos</p>
+                        <p>Ksh 1500/-</p>
+                    </div>
+                    <p class="menu-item-desc">Three pulled beef/ chicken/ pork on flour tortillas, guacamole, salsa with sour cream</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-title" id="nairowuagourmet">
+            <h1>Nairowua Gourmet</h1>
+            <a href="#foodoptions" class="navigate-up">
+                <img src="/logos/up-arrow.png" alt="up arrow" style="height: 2em;">
+            </a>
+        </div>
+        <div style="margin-top: 1em; border: 1px solid white; padding: 0.5em; text-align: center; font-size: 1.2em;">Ceviche</div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>Ceviche de calamares</p>
+                        <p>Ksh 2100/-</p>
+                    </div>
+                    <p class="menu-item-desc">Calamari cured in citrus juice, red onion, garlic, coriander and tomatoes</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Ceviche de chochos</p>
+                        <p>Ksh 2100/-</p>
+                    </div>
+                    <p class="menu-item-desc">Lime cured king fish with homemade beetroot, diced avocado, tomatoes, spring onion, cilantro and citrus dressing</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Ceviche de salmon</p>
+                        <p>Ksh 1800/-</p>
+                    </div>
+                    <p class="menu-item-desc">Cured salmon with mushroom lime juice, salt and pepper and minced garlic</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Ceviche platter</p>
+                        <p>Ksh 4000/-</p>
+                    </div>
+                    <p class="menu-item-desc">A choice of two ceviche</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Ceviche platter</p>
+                        <p>Ksh 5500/-</p>
+                    </div>
+                    <p class="menu-item-desc">A choice of three ceviche</p>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 1em; border: 1px solid white; padding: 0.5em; text-align: center; font-size: 1.2em;">Tataki/Carpaccio</div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>Tuna tataki</p>
+                        <p>Ksh 1500/-</p>
+                    </div>
+                    <p class="menu-item-desc">Lightly seared tuna coated with a sesame seed crust drizzled with a garlic ponzu sauce</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Salmon tataki</p>
+                        <p>Ksh 1500/-</p>
+                    </div>
+                    <p class="menu-item-desc">Lightly seared salmon coated with a sesame seed crust drizzled with a garlic ponzu sauce</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Red snapper Carpaccio</p>
+                        <p>Ksh 1500/-</p>
+                    </div>
+                    <p class="menu-item-desc">Thinly sliced cured red snapper and a tabbouleh salad with chef's signature sauce</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Salmon Carpaccio</p>
+                        <p>Ksh 1500/-</p>
+                    </div>
+                    <p class="menu-item-desc">Thinly sliced cured salmon and a couscous salad with chef's signature sauce</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Build your own tataki/carpaccio platter</p>
+                        <p>Ksh 2750/-</p>
+                    </div>
+                    <p class="menu-item-desc">A choice of two **see dessert menu**</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-title" id="tapas">
+            <h1>Tapas</h1>
+            <a href="#foodoptions" class="navigate-up">
+                <img src="/logos/up-arrow.png" alt="up arrow" style="height: 2em;">
+            </a>
+        </div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>Samosa</p>
+                        <p>Ksh 800/-</p>
+                    </div>
+                    <p class="menu-item-desc">Chicken and coriander served with mango chutney (3pcs)</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Chicken wings</p>
+                        <p>Ksh 1100/- / 1850/-</p>
+                    </div>
+                    <p class="menu-item-desc">Bbq sauce, piripiri sauce, Korean sauce, plain crispy</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Panko fried calamari</p>
+                        <p>Ksh 1200/-</p>
+                    </div>
+                    <p class="menu-item-desc">Served with dynamite sauce or tartar sauce</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Vietnamese summer rolls</p>
+                        <p>Ksh Veg 1100/- Chicken 1300/-</p>
+                    </div>
+                    <p class="menu-item-desc">Rice noodles, avocado, mango, red cabbage, cucumber, nuts with spicy peanut sauce</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Thai fish cake</p>
+                        <p>Ksh 1100/-</p>
+                    </div>
+                    <p class="menu-item-desc">With tzatziki sauce</p>
+                </div>
+            </div>
+            <div class="menu-section">
+                <h2>Croquettes</h2>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Creamy chicken cheese</p>
+                        <p>Ksh 1000/-</p>
+                    </div>
+                    <p class="menu-item-desc">Served with spicy peanut sauce</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Spinach and feta</p>
+                        <p>Ksh 1000/-</p>
+                    </div>
+                    <p class="menu-item-desc">Served with spicy peanut sauce</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Nairowua special chips</p>
+                        <p>Ksh 600/-</p>
+                    </div>
+                    <p class="menu-item-desc">Chips blanched in herbs topped up with cheese</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Nairowua prawns in pink sauce</p>
+                        <p>Ksh 1000/-</p>
+                    </div>
+                    <p class="menu-item-desc">Tempura king prawns served with pink sauce</p>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 1em; border: 1px solid white; padding: 0.5em; text-align: center; font-size: 1.2em;">Tapas to share</div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>Tapas Platter</p>
+                        <p>Ksh 4000/-</p>
+                    </div>
+                    <p class="menu-item-desc">Humus, crudites, corn tor&llers, calamari, chicken wings and baby back ribs</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Tapas vegeterian</p>
+                        <p>Ksh 3000/-</p>
+                    </div>
+                    <p class="menu-item-desc">Humus, crudites, corn tor&llers spinach and feta croquettes summer rolls sorted mshrooms and ugali fries</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Antt-pasta plazer</p>
+                        <p>Ksh 3000/-</p>
+                    </div>
+                    <p class="menu-item-desc">Prosicuao, milano salami, marneted olives, feta cheese camambert cheese chilli tomatoes, humus and pita bread DA</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Moroccan lamb kofta</p>
+                        <p>Ksh 1350/-</p>
+                    </div>
+                    <p class="menu-item-desc">6 mild spicy and grilled minced lamb meat served with sweet tangy sauce and flat bread</p>
+                </div>
+            </div>
+        </div>
+        <div class="menu-title" id="dessert">
+            <h1>Dessert</h1>
+            <a href="#foodoptions" class="navigate-up">
+                <img src="/logos/up-arrow.png" alt="up arrow" style="height: 2em;">
+            </a>
+        </div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>Thai peanut chicken Buddha bowl</p>
+                        <p>Ksh 1300/-</p>
+                    </div>
+                    <p class="menu-item-desc">Kale, spring, onions, carrot,red cabbage,quinoa,red radish sprouts, roasted nuts , red bell pepper, served with balsamic vinaigrette</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Pork Caesar Salad</p>
+                        <p>Ksh 1300/-</p>
+                    </div>
+                    <p class="menu-item-desc">Fresh romaine lettuce , pulled pork, parsley bacon parmesan crotons, with creamy house dressing</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Roast Butternut and Avocado Salad</p>
+                        <p>Ksh 1200/-</p>
+                    </div>
+                    <p class="menu-item-desc">With spiced cashew nuts , orange segment, onions,feta , Served with red pepper dressing</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Poke bowl with smoked tilapia</p>
+                        <p>Ksh 1500/-</p>
+                    </div>
+                    <p class="menu-item-desc">Sushi rice , avacado , pickled cabbage,mango, cucumbers Edamame, shredded carrots , pickled onions,red radish sprouts, served with sesame soy ginger</p>
+                </div>
+            </div>
+        </div>
+        <div class="menu-title" id="kids">
+            <h1>Kids</h1>
+            <a href="#foodoptions" class="navigate-up">
+                <img src="/logos/up-arrow.png" alt="up arrow" style="height: 2em;">
+            </a>
+        </div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>Spaghetti meatballs</p>
+                        <p>Ksh 700/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Fish fingers with chips</p>
+                        <p>Ksh 550/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Nuggets and chips</p>
+                        <p>Ksh 500/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Cheese sandwich</p>
+                        <p>Ksh 500/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Kid burger</p>
+                        <p>Ksh 750/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Beef sausages</p>
+                        <p>Ksh 300/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 1em; border: 1px solid white; padding: 0.5em; text-align: center; font-size: 1.2em;" onclick="menuDropdown('extrasdiv')">Extras <img src="./images/arrow-left.png" alt="" class="droparrow"></div>
+        <div class="menu-section-div" id="extrasdiv">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>Chicken</p>
+                        <p>Ksh 500/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Beef</p>
+                        <p>Ksh 500/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+            </div>
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>Prawn</p>
+                        <p>Ksh 550/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Pork</p>
+                        <p>Ksh 500/-</p>
+                    </div>
+                    <p class="menu-item-desc"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-section">
+            <h4 style="margin-bottom: 1.2em;">Contacts</h4>
+            <p>jim@nairowua.com</p>
+            <p>marketing@nairowua.com</p>
+            <p>management@nairowua.com</p>
+            <p>events@nairowua.com</p>
+        </div>
+        <div class="footer-section">
+            <h4 style="margin-bottom: 1.2em;">Social media</h4>
+            <p>instagram</p>
+            <p>facebook</p>
+            <p>tiktok</p>
+        </div>
+    </div>
+    <script>
+        navdropdown = document.getElementById("navdropdown")
+
+        function toggleDropdown() {
+            navdropdown.classList.toggle("hidden")
+        }
+
+        function menuDropdown(id) {
+            dropdown = document.getElementById(id)
+            dropdown.classList.toggle("hidden")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="https://www.google.com/maps/place/Rosslyn+Riviera+Mall/@-1.2159707,36.7956993,17z/data=!4m10!1m2!2m1!1srosslyn+riviera!3m6!1s0x182f3d5eef234b95:0xac9e573f43fe5923!8m2!3d-1.216572!4d36.7998675!15sCg9yb3NzbHluIHJpdmllcmFaESIPcm9zc2x5biByaXZpZXJhkgEPc2hvcHBpbmdfY2VudGVy4AEA!16s%2Fg%2F11c2l3xmq6?entry=ttu" class="location"><img src="logos/location.png" alt="location" style="height: 1em;"> Roslyn Riviera mall</a>
+        <img src="./logos/logo.png" alt="logo" class="nav-logo">
+        <div class="navdropdown-container">
+            <img src="./logos/burger-bar.png" alt="burgerbar" class="burgerbar" id="burgerbar" onclick="toggleDropdown()">
+            <div class="navdropdown hidden" id="navdropdown">
+                <a href="/" class="nav-link">HOME</a>
+                <a href="/beverages" class="nav-link">DRINKS</a>
+                <a href="/ourstory" class="nav-link">OUR STORY</a>
+                <a href="/reservations" class="nav-link">RESERVATIONS</a>
+                <a href="/store" class="nav-link">MERCHANDISE</a>
+                <!-- <a href="" class="nav-link">GIFT CARDS</a> -->
+            </div>
+        </div>
+    </div>
+    <div class="bottom-nav">
+        <div>
+            <img src="./logos/facebook-app-symbol.png" alt="facebook" style="height: 1.2em; margin-left: 1em;">
+            <img src="./logos/instagram.png" alt="instagram" style="height: 1.2em; margin-left: 1em;">
+            <img src="./logos/spotify.png" alt="spotify" style="height: 1.2em; margin-left: 1em;">
+        </div>
+        <div style="display: flex; align-items: center;">
+            <a href="./workwithus.html" class="nav-link">WORK WITH US</a>
+            <a href="#" class="nav-link">POP-UPS</a>
+            <a href="#" class="nav-link">PRESS</a>
+            <a href="#" class="nav-link">CONTACTS</a>
+            <a href="#" class="nav-link">EVENTS</a>
+        </div>
+    </div>
+    <h1 style="text-align: center;">Work With Us</h1>
+    <div class="workwithus-container">
+        <div class="workwithus">
+            <div class="workwithus-image" style="background-image: url('./images/workwithus/loishorua.jpg');"></div>
+            <div style="padding: 0em 1em;">
+                <h2>Loishorua</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati dicta, inventore porro modi temporibus praesentium. Unde quis cupiditate maiores esse in itaque beatae asperiores et harum delectus exercitationem vel veritatis sit animi voluptas accusantium, laudantium quasi excepturi provident ex ea atque recusandae eum? Totam illo modi similique molestias at laboriosam.</p>
+            </div>
+        </div>
+        <div class="workwithus">
+            <div class="workwithus-image" style="background-image: url('./images/workwithus/dmitri.jpg');"></div>
+            <div style="padding: 0em 1em;">
+                <h2>House of Dmitri</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati dicta, inventore porro modi temporibus praesentium. Unde quis cupiditate maiores esse in itaque beatae asperiores et harum delectus exercitationem vel veritatis sit animi voluptas accusantium, laudantium quasi excepturi provident ex ea atque recusandae eum? Totam illo modi similique molestias at laboriosam.</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    navdropdown = document.getElementById("navdropdown")
+
+    function toggleDropdown() {
+        navdropdown.classList.toggle("hidden")
+    }
+</script>
+</html>

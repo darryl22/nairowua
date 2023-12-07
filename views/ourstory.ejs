@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./index.css">
+    <title>Document</title>
+
+    <style>
+        .story-image{
+            background-position: center;
+            background-size: cover;
+            width: 60%;
+        }
+        .ourstory-gallery-div{
+            width: 80%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 4em;
+        }
+
+        .ourstory-gallery{
+            width: 45%;
+            height: 2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="https://www.google.com/maps/place/Rosslyn+Riviera+Mall/@-1.2159707,36.7956993,17z/data=!4m10!1m2!2m1!1srosslyn+riviera!3m6!1s0x182f3d5eef234b95:0xac9e573f43fe5923!8m2!3d-1.216572!4d36.7998675!15sCg9yb3NzbHluIHJpdmllcmFaESIPcm9zc2x5biByaXZpZXJhkgEPc2hvcHBpbmdfY2VudGVy4AEA!16s%2Fg%2F11c2l3xmq6?entry=ttu" class="location"><img src="logos/location.png" alt="location" style="height: 1em;"> Roslyn Riviera mall</a>
+        <img src="logos/logo.png" alt="logo" class="nav-logo">
+        <div class="navdropdown-container">
+            <img src="logos/burger-bar.png" alt="burgerbar" class="burgerbar" id="burgerbar" onclick="toggleDropdown()">
+            <div class="navdropdown hidden" id="navdropdown">
+                <a href="/" class="nav-link">HOME</a>
+                <a href="/beverages" class="nav-link">DRINKS</a>
+                <a href="/ourstory" class="nav-link">OUR STORY</a>
+                <a href="/reservations" class="nav-link">RESERVATIONS</a>
+                <a href="/store" class="nav-link">MERCHANDISE</a>
+                <!-- <a href="" class="nav-link">GIFT CARDS</a> -->
+            </div>
+        </div>
+    </div>
+    <div class="carousel slide" id="ourstoryCarousel" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="carousel-image" style="background-image: url('./images/ourstory/journey1.jpg');"></div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-image" style="background-image: url('./images/ourstory/journey6.jpg');"></div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-image" style="background-image: url('./images/ourstory/journey7.jpg');"></div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#ourstoryCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#ourstoryCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <div style="width: 40%; margin: auto; margin-bottom: 4em;" class="scrollhide">
+        <h1 style="margin-top: 2em; text-align: center;">OUR STORY</h1>
+        <p style="text-align: center; font-family: 'Resamitz';">"Dante, one of Greenwich Village’s most beloved stomping grounds, has undergone a transformation 104 years in the making. Its latest incarnation: the world’s best bar."</p>
+        <p style="margin-top: 1em; font-family: 'Resamitz'; text-align: center;">Time Out,  4th October  2019</p>
+    </div>
+    <!-- <div style="display: flex;" class="scrollhide">
+        <div class="doubleborder" style="width: 40%; margin: 2em;">
+            <p style="font-family: 'Resamitz'; text-align: center;">
+                Dante has been a beacon for the community of Greenwich Village since it opened its doors in 1915. 
+                Now a registered New York City landmark, this modest meeting house has always attracted people from 
+                all walks of life: famous actors, writers, and musicians, to the down-at-heel of the beatnik generation, 
+                all of whom have found solace in its relaxed and unpretentious environs. A place where a cup of espresso, 
+                a warm smile or a friendly embrace epitomized life’s simple pleasures.
+            </p>
+        </div>
+        <div class="story-image" style="background-image: url('./images/ourstory/carousel1.avif'); box-shadow: 15px 0px 15px black inset;"></div>
+    </div> -->
+    <!-- <div style="width: 70%; margin: auto; margin-top: 4em;">
+        <p style="font-family: 'Resamitz'; text-align: center; margin-bottom: 2em;">
+            Now in its latest incarnation as Dante, its new owners, all lifelong industry professionals, and old friends, 
+            have breathed new life into this iconic space. Its historical integrity and sense of community remain firmly 
+            intact but now complemented by an elevated selection of modern Italian cuisine, world-class cocktails, and an 
+            award-winning bar program. Welcome to Dante, where everything old is new again.
+        </p>
+        <p style="font-family: 'Resamitz'; text-align: center; margin-bottom: 2em;">
+            In 1915 the original Caffe Dante opened its doors on Macdougal Street in Greenwich Village, which at the time, 
+            was known as the 'South Village' and was mostly an Italian neighborhood. It was a local meeting place where 
+            Italian immigrants would gather over espresso and talk of home and politics.
+        </p>
+        <p style="font-family: 'Resamitz'; text-align: center; margin-bottom: 2em;">
+            In 1971, Mario Flotta Sr. took over space. Over the course of the next 40 years, community neighbors and celebrities 
+            alike frequented this cafe for a piece of Italy. Al Pacino, Alec Baldwin, Whoopi Goldberg, Jerry Seinfeld, and Bob 
+            Dylan were just a few of the famous faces that passed through.
+        </p>
+        <p style="font-family: 'Resamitz'; text-align: center; margin-bottom: 2em;">
+            In 2015, the Flotta family decided to part ways with the cafe and entrusted its future with a small New York-based 
+            Australian family. The family has stayed true to the Italian heritage of Caffe Dante whilst taking influences 
+            from the global ingredients that New Yorkers have learned to love and seek out.
+        </p>
+    </div> -->
+    <!-- <div style="display: flex; margin-bottom: 4em;" class="scrollhide">
+        <div class="story-image" style="background-image: url('./images/ourstory/carousel2.avif'); box-shadow: -15px 0px 15px black inset;"></div>
+        <div class="doubleborder" style="width: 40%; margin: 2em;">
+            <p style="font-family: 'Resamitz'; text-align: center;">
+                Dante has been a beacon for the community of Greenwich Village since it opened its doors in 1915. 
+                Now a registered New York City landmark, this modest meeting house has always attracted people from 
+                all walks of life: famous actors, writers, and musicians, to the down-at-heel of the beatnik generation, 
+                all of whom have found solace in its relaxed and unpretentious environs. A place where a cup of espresso, 
+                a warm smile or a friendly embrace epitomized life’s simple pleasures.
+            </p>
+        </div>
+    </div> -->
+    <div class="ourstory-gallery-div">
+        <div class="ourstory-gallery">
+            <img src="./images/ourstory/journey1.jpg" alt="" style="width: 100%; margin-bottom: 1em;" class="scrollhide">
+            <img src="./images/ourstory/journey2.jpg" alt="" style="width: 100%; margin-bottom: 1em;" class="scrollhide">
+            <img src="./images/ourstory/journey3.jpg" alt="" style="width: 100%; margin-bottom: 1em;" class="scrollhide">
+        </div>
+        <div class="ourstory-gallery">
+            <img src="./images/ourstory/journey4.jpg" alt="" style="width: 100%; margin-bottom: 1em;" class="scrollhide">
+            <img src="./images/ourstory/journey5.jpg" alt="" style="width: 100%; margin-bottom: 1em;" class="scrollhide">
+            <img src="./images/ourstory/journey6.jpg" alt="" style="width: 100%; margin-bottom: 1em;" class="scrollhide">
+        </div>
+    </div>
+</body>
+<script>
+    carousel = document.getElementById("carousel")
+    carouselPosition = 1
+    navdropdown = document.getElementById("navdropdown")
+
+    const throttle = (fn, delay) => { 
+        let time = Date.now(); 
+        return () => { 
+            if((time + delay - Date.now()) <= 0) { 
+                fn(); 
+                time = Date.now(); 
+            } 
+        } 
+    }
+
+    function toggleDropdown() {
+        navdropdown.classList.toggle("hidden")
+    }
+
+    function reveal() {
+        let scrollhide = document.querySelectorAll(".scrollhide")
+
+        for (let x = 0; x < scrollhide.length; x++) {
+            let windowheight = window.innerHeight
+            let elementTop = scrollhide[x].getBoundingClientRect().top
+            let elementBottom = scrollhide[x].getBoundingClientRect().bottom
+            let visible = 150
+
+            if (elementTop < windowheight - visible) {
+                scrollhide[x].classList.add("active")
+            } else {
+                scrollhide[x].classList.remove("active")
+            }
+        }
+    }
+
+    window.addEventListener("scroll", throttle(reveal, 100))
+</script>
+</html>
