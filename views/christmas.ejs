@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Christmas packages</title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="https://www.google.com/maps/place/Rosslyn+Riviera+Mall/@-1.2159707,36.7956993,17z/data=!4m10!1m2!2m1!1srosslyn+riviera!3m6!1s0x182f3d5eef234b95:0xac9e573f43fe5923!8m2!3d-1.216572!4d36.7998675!15sCg9yb3NzbHluIHJpdmllcmFaESIPcm9zc2x5biByaXZpZXJhkgEPc2hvcHBpbmdfY2VudGVy4AEA!16s%2Fg%2F11c2l3xmq6?entry=ttu" class="location"><img src="logos/location.png" alt="location" style="height: 1em;"> Roslyn Riviera mall</a>
+        <img src="logos/logo.png" alt="logo" class="nav-logo">
+        <div class="navdropdown-container">
+            <img src="logos/burger-bar.png" alt="burgerbar" class="burgerbar" id="burgerbar" onclick="toggleDropdown()">
+            <div class="navdropdown hidden" id="navdropdown">
+                <a href="/" class="nav-link">HOME</a>
+                <a href="/beverages" class="nav-link">DRINKS</a>
+                <a href="/ourstory" class="nav-link">OUR STORY</a>
+                <a href="/reservations" class="nav-link">RESERVATIONS</a>
+                <a href="/store" class="nav-link">MERCHANDISE</a>
+                <!-- <a href="" class="nav-link">GIFT CARDS</a> -->
+            </div>
+        </div>
+    </div>
+    <h1 style="text-align: center; margin: 1em 0em;" id="foodoptions">Nairowua Christmas Menu</h1>
+    <div class="menu-options-div">
+        <a href="#platinum" class="menu-options-link">
+            <div class="menu-options" style="background-color: #e5e4e2 ;">
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <p class="menu-options-title" style="color: black;">Platinum Package</p>
+                </div>
+            </div>
+        </a>
+        <a href="#gold" class="menu-options-link">
+            <div class="menu-options" style="background-color: gold;">
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <p class="menu-options-title" style="color: black;">Gold Package</p>
+                </div>
+            </div>
+        </a>
+        <a href="#silver" class="menu-options-link">
+            <div class="menu-options" style="background-color: silver;">
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <p class="menu-options-title" style="color: black;">Silver Package</p>
+                </div>
+            </div>
+        </a>
+    </div>
+    <img src="/images/christmas/christmas-offer.jpg" alt="christmas offer" style="width: 80%; display: block; margin: auto; margin-top: 3em;">
+    <div class="menu-div">
+        <div class="menu-title" id="5course">
+            <h1>5 Course Meal</h1>
+            <a href="#foodoptions" class="navigate-up">
+                <img src="/logos/up-arrow.png" alt="up arrow" style="height: 2em;">
+            </a>
+        </div>
+        <p style="margin-top: 1em; font-family: Resamitz;">7500/- per person</p>
+        <div style="margin-top: 1em; border: 1px solid white; padding: 0.5em; text-align: center; font-size: 1.2em;">Appetizer</div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>Boomerang shrimps</p>
+                    </div>
+                    <p class="menu-item-desc">Tender shrimps ligntly breaded and flash fried served with sweet chilli sauce.</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>From the ocean</p>
+                    </div>
+                    <p class="menu-item-desc">Spicy mussels tossed with white wine sauce.</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Father christmas salad</p>
+                    </div>
+                    <p class="menu-item-desc">Lettuce, oranges, feta, cheese, pomegranate seeds served with honey mustard dressing.</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Classic walforf salad</p>
+                    </div>
+                    <p class="menu-item-desc">Marinated chicken cubes, celery, grapes, red onions, pepper, mayonnaise, walnuts served on bed of rocket leaves.</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Salmorejo soup</p>
+                    </div>
+                    <p class="menu-item-desc">A traditional Spanish recipe chilled tomato soup topped up with ham and boiled egg.</p>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 1em; border: 1px solid white; padding: 0.5em; text-align: center; font-size: 1.2em;">Main course</div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <p class="menu-item-desc">Grilled salmon served with sweet potato mash.</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>T-bone steak</p>
+                    </div>
+                    <p class="menu-item-desc">Marinated with herbs and grilled to your preference served with glass of champagne.</p>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 1em; border: 1px solid white; padding: 0.5em; text-align: center; font-size: 1.2em;">Dessert</div>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <p class="menu-item-desc">Meringue tart with caramel ice cream.</p>
+                </div>
+            </div>
+        </div>
+        <div class="menu-title" id="5course">
+            <h1>3 Course Meal</h1>
+            <a href="#foodoptions" class="navigate-up">
+                <img src="/logos/up-arrow.png" alt="up arrow" style="height: 2em;">
+            </a>
+        </div>
+        <p style="margin-top: 1em; font-family: Resamitz;">5000/- per person</p>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>Appetizer</p>
+                    </div>
+                    <p class="menu-item-desc">*Soup of the day <br><br> *Vichyssoise soup <br><br> pureed leeks potatoes onions and cream served chilled and garnished with chopped chives.</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Salad</p>
+                    </div>
+                    <p class="menu-item-desc">Spinach, fresh strawberries, sliced almonds, blue cheese and balsamic vinegar.</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Main Course</p>
+                    </div>
+                    <p class="menu-item-desc">*Pasta with prawns algio olio <br><br> Spiced prawns with garlic olive oil and chilli served with focaccia bread.</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Lamb chops</p>
+                    </div>
+                    <p class="menu-item-desc">350 grams. Balsamic glazed lamb chops served with mashed potatoes with mushroom sauce.</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Dessert</p>
+                    </div>
+                    <p class="menu-item-desc">A brownie sundae topped with vanilla strawberry ice cream with a glass of champagne.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-title" id="platinum">
+            <h1>Platinum Package</h1>
+            <a href="#foodoptions" class="navigate-up">
+                <img src="/logos/up-arrow.png" alt="up arrow" style="height: 2em;">
+            </a>
+        </div>
+        <p style="margin-top: 1em; font-family: Resamitz;">4200/- per person</p>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>Starter</p>
+                    </div>
+                    <p class="menu-item-desc">*Calamari <br><br>*Baby back ribs</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Main Course</p>
+                    </div>
+                    <p class="menu-item-desc">*Vampire steak grilled to your preference, served with pepper sauce. <br><br>*Chicken vol au vent, shredded braised chicken in white wine, mushrooms and meatballs served on puffy pastry. <br><br>*Fried prawn curry accompanied with plantain or coconut rice or brown rice</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Dessert</p>
+                    </div>
+                    <p class="menu-item-desc">*Cheese cake <br><br>*Chocolate mouse</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Drink</p>
+                    </div>
+                    <p class="menu-item-desc">*Glass of champagne</p>
+                </div>
+            </div>
+        </div>
+        <div class="menu-title" id="gold">
+            <h1>Gold Package</h1>
+            <a href="#foodoptions" class="navigate-up">
+                <img src="/logos/up-arrow.png" alt="up arrow" style="height: 2em;">
+            </a>
+        </div>
+        <p style="margin-top: 1em; font-family: Resamitz;">3600/- per person</p>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>Starter</p>
+                    </div>
+                    <p class="menu-item-desc">*Ossobucco beef soup <br><br>*Asparagus soup</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Main Course</p>
+                    </div>
+                    <p class="menu-item-desc">*Sirloin steak with vegetables and mukimo (ireo) <br><br>*Fried prawn curry accompanied with plantain and coconut rice</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Dessert</p>
+                    </div>
+                    <p class="menu-item-desc">*Chocolate mouse</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Drink</p>
+                    </div>
+                    <p class="menu-item-desc">*Glass of champagne</p>
+                </div>
+            </div>
+        </div>
+        <div class="menu-title" id="silver">
+            <h1>Silver Package</h1>
+            <a href="#foodoptions" class="navigate-up">
+                <img src="/logos/up-arrow.png" alt="up arrow" style="height: 2em;">
+            </a>
+        </div>
+        <p style="margin-top: 1em; font-family: Resamitz;">3000/- per person</p>
+        <div class="menu-section-div">
+            <div class="menu-section">
+                <div>
+                    <div class="menu-item-head">
+                        <p>Starter</p>
+                    </div>
+                    <p class="menu-item-desc">*Ossobucco beef soup</p>
+                </div>
+                <div>
+                    <div class="menu-item-head">
+                        <p>Main Course</p>
+                    </div>
+                    <p class="menu-item-desc">*Grilled lamb chops accompanied with mashed sweet potatoes or mashed potatoes <br><br>*Grilled pork chops served with creamed spinach</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer" id="footer">
+        <div class="footer-section">
+            <h3 style="margin-bottom: 1.2em;">CONTACTS</h3>
+            <p>jim@nairowua.com</p>
+            <p>marketing@nairowua.com</p>
+            <p>management@nairowua.com</p>
+            <p>events@nairowua.com</p>
+        </div>
+        <div class="footer-section">
+            <h3 style="margin-bottom: 1.2em;">SOCIAL MEDIA</h3>
+            <a href="#"><img src="/logos/instagram.png" alt="instagram" style="height: 1em;"> instagram</a>
+            <a href="#"><img src="/logos/facebook-app-symbol.png" alt="instagram" style="height: 1em;"> facebook</a>
+        </div>
+    </div>
+
+    <script>
+        navdropdown = document.getElementById("navdropdown")
+
+        function toggleDropdown() {
+            navdropdown.classList.toggle("hidden")
+        }
+
+        function menuDropdown(id) {
+            dropdown = document.getElementById(id)
+            dropdown.classList.toggle("hidden")
+        }
+    </script>
+</body>
+</html>
